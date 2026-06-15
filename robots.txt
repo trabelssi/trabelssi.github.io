@@ -1,0 +1,6 @@
+# robots.txt for https://trabelssi.github.io/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://trabelssi.github.io/TrabelsiMohamedAmine.github.io/sitemap.xml
