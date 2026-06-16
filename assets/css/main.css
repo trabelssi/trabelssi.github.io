@@ -4527,9 +4527,14 @@ body.theme-cyan {
     display: flex;
     align-items: center;
     gap: 0.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-size: 1.8rem;
     font-weight: 700;
+}
+
+.footer-logo .logo-icon {
+    width: 80px;
+    height: 80px;
 }
 
 .footer-tagline {
