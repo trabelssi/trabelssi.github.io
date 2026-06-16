@@ -2,7 +2,7 @@
 
 A modern, futuristic portfolio website showcasing telecommunications engineering, embedded systems, and network infrastructure expertise.
 
-![Portfolio Preview](assets/images/profile.jpg)
+
 
 ## 🌟 Features
 
