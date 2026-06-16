@@ -81,11 +81,6 @@ window.addEventListener('scroll', () => {
     }
 }, { passive: true });
 
-// Console message
-console.log('%c👋 Welcome to Mohamed Amine Trabelsi\'s Portfolio', 'color: #00ff00; font-size: 20px; font-weight: bold;');
-console.log('%cTelecommunications & Embedded Systems Engineer', 'color: #888; font-size: 14px;');
-console.log('%cGitHub: github.com/trabelssi', 'color: #888; font-size: 12px;');
-
 // Prevent initial loading screen overflow
 document.body.style.overflow = 'hidden';
 
@@ -458,12 +453,6 @@ document.querySelectorAll('.skill-percentage').forEach(percent => {
     skillPercentObserver.observe(percent);
 });
 
-console.log('%c✨ Portfolio Enhanced!', 'color: #00ff00; font-size: 16px; font-weight: bold;');
-console.log('%c• Project Filtering', 'color: #888;');
-console.log('%c• Animated Progress Bars', 'color: #888;');
-console.log('%c• Categorized Tech Stack', 'color: #888;');
-console.log('%c• Enhanced Interactions', 'color: #888;');
-
 
 // ========================================
 // CREATIVE CERTIFICATIONS REVEAL ANIMATION
@@ -576,8 +565,6 @@ if (certificationsSection) {
     `;
     document.head.appendChild(particleStyle);
 }
-
-console.log('%c🎓 Certifications Animation Loaded!', 'color: #00ff00; font-size: 14px; font-weight: bold;');
 
 
 // ========================================
@@ -715,8 +702,6 @@ if (certificationsScroll && certScrollLeft && certScrollRight) {
         }, { once: true });
     }
 }
-
-console.log('%c📜 Certifications Horizontal Scroll Enabled!', 'color: #00ff00; font-size: 14px; font-weight: bold;');
 
 
 // Horizontal Scroll for Projects Section
@@ -871,12 +856,6 @@ if (projectsScroll && scrollNavLeft && scrollNavRight) {
         cardObserver.observe(card);
     });
 }
-
-console.log('%c🎨 Horizontal Scroll Enabled!', 'color: #00ff00; font-size: 16px; font-weight: bold;');
-console.log('%c• Drag to scroll', 'color: #888;');
-console.log('%c• Arrow keys navigation', 'color: #888;');
-console.log('%c• Click progress dots', 'color: #888;');
-console.log('%c• Smooth snap scrolling', 'color: #888;');
 
 
 // ========================================
@@ -1139,15 +1118,6 @@ window.addEventListener('scroll', () => {
     }, 150);
 });
 */
-
-console.log('%c🎬 Creative Scroll Effects Loaded!', 'color: #00ff00; font-size: 16px; font-weight: bold;');
-console.log('%c• Scroll Progress Circle', 'color: #888;');
-console.log('%c• Navigation Dots', 'color: #888;');
-console.log('%c• Parallax Effects', 'color: #888;');
-console.log('%c• Section Reveals', 'color: #888;');
-console.log('%c• Velocity Indicators', 'color: #888;');
-console.log('%c• Magnetic Cards', 'color: #888;');
-console.log('%c• Staggered Animations', 'color: #888;');
 
 
 // ========================================
@@ -1463,7 +1433,6 @@ if (logo) {
         if (logoClickCount === 3) {
             // Triple click activates developer mode
             document.body.classList.toggle('developer-mode');
-            console.log('%c🔓 Developer Mode Toggled!', 'color: #00ff00; font-size: 20px; font-weight: bold;');
             logoClickCount = 0;
         }
         
@@ -1499,30 +1468,6 @@ function monitorPerformance() {
 }
 
 monitorPerformance();
-
-// Console Easter Egg
-console.log('%c' + `
-╔═══════════════════════════════════════════════════════════╗
-║                                                           ║
-║            MOHAMED AMINE TRABELSI - PORTFOLIO             ║
-║                                                           ║
-║     Telecommunications & Embedded Systems Engineer        ║
-║                                                           ║
-║            Try the Konami Code: ↑↑↓↓←→←→BA                ║
-║                                                           ║
-║                                                           ║
-║          Triple-click logo for developer mode             ║
-║                                                           ║
-║                                                           ║
-║                                                           ║
-║                                                           ║
-╚═══════════════════════════════════════════════════════════╝
-`, 'color: #00ff00; font-family: monospace;');
-
-console.log('%c📧 Contact: aminetrabls021@gmail.com', 'color: #888; font-size: 12px;');
-console.log('%c🐙 GitHub: github.com/trabelssi', 'color: #888; font-size: 12px;');
-
-console.log('%c🎉 All Enhanced Features Loaded!', 'color: #00ff00; font-size: 16px; font-weight: bold;');
 
 
 // ========================================
@@ -1571,24 +1516,12 @@ if (lastUpdateEl) {
 // ========================================
 
 window.addEventListener('load', () => {
+    // Performance monitoring without console logs
     const perfData = window.performance.timing;
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-    const connectTime = perfData.responseEnd - perfData.requestStart;
-    const renderTime = perfData.domComplete - perfData.domLoading;
     
-    console.log('%c⚡ Performance Metrics', 'color: #00ff00; font-size: 16px; font-weight: bold;');
-    console.log(`📊 Page Load Time: ${pageLoadTime}ms`);
-    console.log(`🔌 Connection Time: ${connectTime}ms`);
-    console.log(`🎨 Render Time: ${renderTime}ms`);
-    
-    // Store for analytics
-    if (pageLoadTime < 3000) {
-        console.log('%c✅ Excellent Performance!', 'color: #00ff00; font-weight: bold;');
-    } else if (pageLoadTime < 5000) {
-        console.log('%c⚠️ Good Performance', 'color: #ffd700; font-weight: bold;');
-    } else {
-        console.log('%c❌ Performance could be improved', 'color: #ff0055; font-weight: bold;');
-    }
+    // Store for analytics if needed
+    localStorage.setItem('pageLoadTime', pageLoadTime);
 });
 
 // ========================================
@@ -1618,7 +1551,6 @@ document.addEventListener('keydown', (e) => {
     // Ctrl/Cmd + K: Focus search (if you add search later)
     if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
-        console.log('%c⌨️ Keyboard shortcut activated!', 'color: #00ff00;');
     }
     
     // Escape: Close any modals
@@ -1676,49 +1608,10 @@ window.addEventListener('scroll', () => {
 // LOADING COMPLETE
 // ========================================
 
-console.log('%c' + `
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ALL FEATURES LOADED SUCCESSFULLY!
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-✅ Core Features:
-   • Horizontal Project Carousel
-   • Horizontal Certifications Carousel
-   • Scroll Progress Indicators
-   • Navigation Dots
-   • Custom Cursor Effects
-
-✅ Enhanced Features:
-   • Skills Progress Bars
-   • Achievements Section
-   • Theme Switcher (6 themes)
-   • Sound Toggle
-   • Particle Network
-   • Matrix Rain Effect
-
-✅ Easter Eggs:
-   • Konami Code (↑↑↓↓←→←→BA)
-   • Triple-click Logo
-   • Double-click Email to Copy
-   • Keyboard Shortcuts
-
-✅ Performance:
-   • ${fpsCounter} FPS
-   • Smooth 60fps animations
-   • Optimized rendering
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-`, 'color: #00ff00; font-family: monospace; font-size: 12px;');
-
-console.log('%c Portfolio Enhanced Successfully!', 'color: #00ff00; font-size: 20px; font-weight: bold; text-shadow: 0 0 10px #00ff00;');
-
-
 // ========================================
 // PROFILE CARD STICKY SCROLL - REMOVED
 // Now handled by CSS position: sticky
 // ========================================
-
-console.log('%c Profile Card Sticky (CSS) Enabled!', 'color: #00ff00; font-size: 14px; font-weight: bold;');
 
 
 // ========================================
@@ -1798,8 +1691,6 @@ if (timelineItems.length > 0) {
         }
     }
 }
-
-console.log('%c⏱️ Timeline Progress Animation Enhanced!', 'color: #00ff00; font-size: 14px; font-weight: bold;');
 
 
 // ========================================
@@ -1906,8 +1797,6 @@ if (serviceCards.length > 0) {
     });
 }
 
-console.log('%c Service Cards Enhanced Animation Loaded!', 'color: #00ff00; font-size: 14px; font-weight: bold;');
-
 
 // ========================================
 // TECH STACK CLOUD TAG ANIMATION
@@ -1968,8 +1857,6 @@ if (techFilterBtns.length > 0) {
         });
     });
 }
-
-console.log('%c☁️ Tech Cloud Animation Loaded!', 'color: #00ff00; font-size: 14px; font-weight: bold;');
 
 
 // ========================================
@@ -2254,4 +2141,4 @@ document.addEventListener('click', (e) => {
     }
 });
 
-console.log('%c🤖 AI Chatbot Loaded!', 'color: #00ff00; font-size: 14px; font-weight: bold;');
+// AI Chatbot functionality loaded
