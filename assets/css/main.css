@@ -3513,71 +3513,93 @@ section {
     opacity: 1;
 }
 
-/* Circular Progress Container */
+/* Skill Header with Icon */
 .skill-header {
-    position: relative;
-    width: 160px;
-    height: 160px;
-    margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* Circular background track */
-.skill-header::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 8px solid rgba(255, 255, 255, 0.05);
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-/* Percentage in center */
-.skill-percentage {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--accent);
-    text-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+    gap: 1rem;
+    margin-bottom: 1rem;
     position: relative;
-    z-index: 2;
+}
+
+.skill-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(0, 255, 0, 0.1), rgba(0, 255, 0, 0.05));
+    border: 2px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--accent);
     transition: all 0.3s;
 }
 
-.skill-progress-item:hover .skill-percentage {
-    transform: scale(1.2);
-    text-shadow: 0 0 30px rgba(0, 255, 0, 1);
+.skill-progress-item:hover .skill-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
 }
 
-/* Skill name below circle */
+/* Proficiency Level Badge */
+.skill-level {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+}
+
+.skill-level.expert {
+    background: linear-gradient(135deg, rgba(0, 255, 0, 0.2), rgba(0, 200, 0, 0.1));
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.skill-level.proficient {
+    background: linear-gradient(135deg, rgba(0, 200, 255, 0.2), rgba(0, 150, 255, 0.1));
+    color: #00ccff;
+    border: 1px solid #00ccff;
+}
+
+.skill-level.familiar {
+    background: linear-gradient(135deg, rgba(255, 200, 0, 0.2), rgba(200, 150, 0, 0.1));
+    color: #ffcc00;
+    border: 1px solid #ffcc00;
+}
+
+/* Skill name below */
 .skill-name {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-primary);
     transition: color 0.3s;
     line-height: 1.4;
-    max-width: 200px;
+    margin-bottom: 0.5rem;
 }
 
 .skill-progress-item:hover .skill-name {
     color: var(--accent);
 }
 
-/* Circular SVG Progress */
-.progress-ring {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: rotate(-90deg);
+/* Experience text */
+.skill-experience {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
 }
 
-.progress-ring-circle {
-    stroke: var(--accent);
-    stroke-width: 8;
+/* Old circular progress (hidden) */
+.progress-ring {
+    display: none;
+}
+
+.skill-percentage {
+    display: none;
+}
     stroke-linecap: round;
     fill: none;
     filter: drop-shadow(0 0 8px rgba(0, 255, 0, 0.6));
